@@ -11,6 +11,7 @@ input.addEventListener('input', debounce(onChange, DEBOUNCE_DELAY));
 
 function onChange() {
   if (!input.value) {
+    countryList.innerHTML = '';
     return;
   }
   fetchCountries(input.value.trim())
